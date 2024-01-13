@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 import 'OnBoarding2.dart';
+import 'OnBoarding3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,16 +76,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 155, left: 24, right: 24),
-            child: Row(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    SizedBox(
-                      width: 100,
-                      height: 50,
-                      child: Expanded(
-                        child: OutlinedButton(
+            child: SizedBox(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: 100,
+                        height: 50,
+                        child: Expanded(
+                          child: OutlinedButton(
                             style: OutlinedButton.styleFrom(
                               side: const BorderSide(
                                   color: Color.fromARGB(255, 5, 96, 250)),
@@ -93,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             onPressed: (){
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding2()));
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding3()));
                             },
                             child: const Text(
                               "Skip",
@@ -106,46 +108,46 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             )
                         ),
-                      ),
-                    )
-                  ],
-                ),
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(
-                      width: 100,
-                      height: 50,
-                      child: Expanded(
-                        child: OutlinedButton(
-                            style: OutlinedButton.styleFrom(
-                              side: const BorderSide(
-                                  color: Color.fromARGB(255, 5, 96, 250)),
-                              backgroundColor: Color.fromARGB(255, 5, 96, 250),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)
+                        )
+                      )
+                    ],
+                  ),
+              
+                  Column(
+                    children: [
+                      SizedBox(
+                        width: 100,
+                        height: 50,
+                        child: Expanded(
+                          child: OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                    color: Color.fromARGB(255, 5, 96, 250)),
+                                backgroundColor: Color.fromARGB(255, 5, 96, 250),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)
+                                ),
                               ),
-                            ),
-                            onPressed: (){
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding2()));
-                              },
-                            child: const Text(
-                              "Next",
-                              style: TextStyle(
-                                color: Colors.white,
-                                  fontSize: 14,
-                                  fontFamily: "Roboto",
-                                  fontStyle: FontStyle.normal,
-                                  fontWeight: FontWeight.w700
-                              ),
-                            )
+                              onPressed: (){
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding2()));
+                                },
+                              child: const Text(
+                                "Next",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                    fontSize: 14,
+                                    fontFamily: "Roboto",
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.w700
+                                ),
+                              )
+                          ),
                         ),
-                      ),
-                    )
-                  ],
-                )
-              ],
+                      )
+                    ],
+                  )
+                ],
+              ),
             ),
           )
         ],
