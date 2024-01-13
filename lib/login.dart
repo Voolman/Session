@@ -219,66 +219,77 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 303, left: 19, right: 19),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  SizedBox(
-                    width: double.infinity,
-                    height: 40,
-                    child: Expanded(
-                        child: OutlinedButton(
-                          onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home())); },
-                          child: const Text(
-                            "Login",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontFamily: "Roboto",
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w700
-                            ),
-                          )
-                        )
-                    ),
-                  ),
-                  Padding(
-                      padding: const EdgeInsets.only(top: 20),
-                    child: Center(
-                      child: Row(
-                        children: [
-                          const Text(
-                            "Not have account?",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: Color.fromARGB(255, 167, 167, 167),
-                                fontSize: 14,
-                                fontFamily: "Roboto",
-                                fontStyle: FontStyle.normal,
-                                fontWeight: FontWeight.w400
-                            ),
-                          ),
-                          TextButton(
-                              onPressed: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUp()));
-                              },
-                              child: const Text(
-                                  "Sign Up",
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 5, 96, 250),
-                                    fontSize: 14,
-                                    fontFamily: "Roboto",
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w500
+              padding: const EdgeInsets.only(top: 343, left: 19, right: 19),
+              child: Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SizedBox(
+                      width: double.infinity,
+                      height: 40,
+                      child: Expanded(
+                          child: OutlinedButton(
+                              style: OutlinedButton.styleFrom(
+                                side: const BorderSide(
+                                    color: Color.fromARGB(255, 5, 96, 250)),
+                                backgroundColor: Color.fromARGB(255, 5, 96, 250),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5)
                                 ),
-                              )
+                              ),
+                            onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home())); },
+                            child: const Text(
+                              "Login",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontFamily: "Roboto",
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w700
+                              ),
+                            )
                           )
-                        ],
                       ),
                     ),
-                  )
-                ],
+                    Padding(
+                        padding: const EdgeInsets.only(top: 10),
+                      child: Center(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Not have account?",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 167, 167, 167),
+                                  fontSize: 14,
+                                  fontFamily: "Roboto",
+                                  fontStyle: FontStyle.normal,
+                                  fontWeight: FontWeight.w400
+                              ),
+                            ),
+                            TextButton(
+                                onPressed: (){
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUp()));
+                                },
+                                child: const Text(
+                                    "Sign Up",
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 5, 96, 250),
+                                      fontSize: 14,
+                                      fontFamily: "Roboto",
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w500
+                                  ),
+                                )
+                            )
+                          ],
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             )
           ],
