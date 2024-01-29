@@ -1,4 +1,3 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
 
 import 'OnBoarding2.dart';
@@ -44,7 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: SizedBox(
               width: double.infinity,
               height: 316,
-              child: Image.network("https://avatars.mds.yandex.net/get-images-cbir/4509884/ydtyHH0lWLvCkCHkFywKMQ2718/ocr", fit: BoxFit.fill)
+              child: Image.network("https://i.imgur.com/kxnMbj8.png", fit: BoxFit.fill)
             ),
           ),
           const Padding(
@@ -95,7 +94,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               ),
                             ),
                             onPressed: (){
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding3()));
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OnBoarding3()));
                             },
                             child: const Text(
                               "Skip",
@@ -123,13 +122,13 @@ class _MyHomePageState extends State<MyHomePage> {
                               style: OutlinedButton.styleFrom(
                                 side: const BorderSide(
                                     color: Color.fromARGB(255, 5, 96, 250)),
-                                backgroundColor: Color.fromARGB(255, 5, 96, 250),
+                                backgroundColor: const Color.fromARGB(255, 5, 96, 250),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)
                                 ),
                               ),
                               onPressed: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding2()));
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OnBoarding2()));
                                 },
                               child: const Text(
                                 "Next",

@@ -16,7 +16,7 @@ class OnBoarding3 extends StatelessWidget {
               child: SizedBox(
                   width: double.infinity,
                   height: 316,
-                  child: Image.network("https://avatars.mds.yandex.net/get-images-cbir/2472796/YNr6asjQqaPgZf67KdbxAw4857/ocr", fit: BoxFit.fill)
+                  child: Image.network("https://i.imgur.com/DzoxAG4.png", fit: BoxFit.fill)
               ),
             ),
             const Padding(
@@ -34,7 +34,7 @@ class OnBoarding3 extends StatelessWidget {
                 )
             ),
             const Padding(
-              padding: EdgeInsets.only(top:10, left: 55, right: 54),
+              padding: EdgeInsets.only(top:10, left: 44, right: 45),
               child: Text(
                 "Track your packages/items from the comfort of your home till final destination",
                 textAlign: TextAlign.center,
@@ -47,13 +47,14 @@ class OnBoarding3 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 155, left: 24, right: 24),
+              padding: const EdgeInsets.only(top: 188, left: 24, right: 24, bottom: 20),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
                     child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
+                          fixedSize: const Size.fromHeight(46),
                           side: const BorderSide(
                               color: Color.fromARGB(255, 5, 96, 250)),
                           backgroundColor: const Color.fromARGB(255, 5, 96, 250),
@@ -62,7 +63,7 @@ class OnBoarding3 extends StatelessWidget {
                           ),
                         ),
                         onPressed: (){
-                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => Holder()));
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Holder()));
                         },
                         child: const Text(
                           "Next",

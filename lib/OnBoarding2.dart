@@ -16,7 +16,7 @@ class OnBoarding2 extends StatelessWidget {
               child: SizedBox(
                   width: double.infinity,
                   height: 316,
-                  child: Image.network("https://avatars.mds.yandex.net/get-images-cbir/98723/luQDAmTQG7XRYGzhjj_ntQ4316/ocr", fit: BoxFit.fill)
+                  child: Image.network("https://i.imgur.com/Nx65N5r.png", fit: BoxFit.fill)
               ),
             ),
             const Padding(
@@ -47,76 +47,76 @@ class OnBoarding2 extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 155, left: 24, right: 24),
-              child: Row(
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      SizedBox(
-                        width: 100,
-                        height: 50,
-                        child: Expanded(
-                          child: OutlinedButton(
-                              style: OutlinedButton.styleFrom(
-                                side: const BorderSide(
-                                    color: Color.fromARGB(255, 5, 96, 250)),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(5)
+              padding: const EdgeInsets.only(top: 190, left: 24, right: 24),
+              child: SizedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        SizedBox(
+                          width: 100,
+                          height: 50,
+                          child: Expanded(
+                            child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  side: const BorderSide(
+                                      color: Color.fromARGB(255, 5, 96, 250)),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5)
+                                  ),
                                 ),
-                              ),
-                              onPressed: (){
-                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding3()));
-                              },
-                              child: const Text(
-                                "Skip",
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 5, 96, 250),
-                                    fontSize: 14,
-                                    fontFamily: "Roboto",
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w700
-                                ),
-                              )
+                                onPressed: (){
+                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OnBoarding3()));
+                                },
+                                child: const Text(
+                                  "Skip",
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 5, 96, 250),
+                                      fontSize: 14,
+                                      fontFamily: "Roboto",
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w700
+                                  ),
+                                )
+                            ),
                           ),
                         ),
-                      )
-                    ],
-                  ),
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      SizedBox(
-                        width: 100,
-                        height: 50,
-                        child: Expanded(
-                          child: OutlinedButton(
-                              style: OutlinedButton.styleFrom(
-                                side: const BorderSide(
-                                    color: Color.fromARGB(255, 5, 96, 250)),
-                                backgroundColor: const Color.fromARGB(255, 5, 96, 250),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(5)
+                      ]
+                    ),
+                    Column(
+                      children: [
+                          SizedBox(
+                          width: 100,
+                          height: 50,
+                          child: Expanded(
+                            child: OutlinedButton(
+                                style: OutlinedButton.styleFrom(
+                                  side: const BorderSide(
+                                      color: Color.fromARGB(255, 5, 96, 250)),
+                                  backgroundColor: const Color.fromARGB(255, 5, 96, 250),
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(5)
+                                  ),
                                 ),
-                              ),
-                              onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => OnBoarding3()));},
-                              child: const Text(
-                                "Next",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                    fontSize: 14,
-                                    fontFamily: "Roboto",
-                                    fontStyle: FontStyle.normal,
-                                    fontWeight: FontWeight.w700
-                                ),
-                              )
+                                onPressed: (){Navigator.of(context).push(MaterialPageRoute(builder: (context) => const OnBoarding3()));},
+                                child: const Text(
+                                  "Next",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 14,
+                                      fontFamily: "Roboto",
+                                      fontStyle: FontStyle.normal,
+                                      fontWeight: FontWeight.w700
+                                  ),
+                                )
+                            ),
                           ),
                         ),
-                      )
-                    ],
-                  )
-                ],
+                      ]
+                    )
+                  ],
+                ),
               ),
             )
           ],
