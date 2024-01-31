@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'Wallet.dart';
-import 'Track.dart';
+import 'Home.dart';
 import 'Profile.dart';
 
-
-
-
-class Home extends StatefulWidget {
-  const Home({super.key});
+class Track extends StatefulWidget {
+  const Track({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<Track> createState() => _TrackState();
 }
 
-class _HomeState extends State<Home> {
+class _TrackState extends State<Track> {
 
   List pages = [const Home(), const Wallet(), const Track(), const Profile()];
-  int currentIndex = 0;
+  int currentIndex = 2;
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
@@ -41,13 +39,13 @@ class _HomeState extends State<Home> {
         items: const [
           BottomNavigationBarItem(
               icon: Icon(
-                  Icons.house_outlined,
+                Icons.house_outlined,
               ),
               label: "Home"
           ),
           BottomNavigationBarItem(
               icon: Icon(
-                  Icons.wallet_outlined,
+                Icons.wallet_outlined,
               ),
               label: "Wallet"
           ),
@@ -58,7 +56,7 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
               icon: Icon(
-                  Icons.person,
+                Icons.person,
               ),
               label: "Profile"
           ),

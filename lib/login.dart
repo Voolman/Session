@@ -33,6 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   var isChecked = false;
 
   @override
@@ -49,7 +50,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Color.fromARGB(255, 58, 58, 58),
-                        height: 1.5,
                         fontSize: 24,
                         fontFamily: "Roboto",
                         fontStyle: FontStyle.normal,
@@ -68,7 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Color.fromARGB(255, 167, 167, 167),
-                        height: 0.8,
                         fontSize: 14,
                         fontFamily: "Roboto",
                         fontStyle: FontStyle.normal,
@@ -90,7 +89,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           "Email Address",
                           style: TextStyle(
                               color: Color.fromARGB(255, 167, 167, 167),
-                              height: 0.8,
                               fontSize: 14,
                               fontFamily: "Roboto",
                               fontStyle: FontStyle.normal,
@@ -100,26 +98,28 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(
-                              width: 1,
-                              color: Color.fromARGB(255, 167, 167, 167)
+                  SizedBox(
+                    height: 44,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderSide: BorderSide(
+                                width: 1,
+                                color: Color.fromARGB(255, 167, 167, 167)
+                                ),
                               ),
-                            ),
-                      label: Text(
-                        "***********@mail.com",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: Color.fromARGB(255, 207, 207, 207),
-                            height: 0.8,
-                            fontSize: 14,
-                            fontFamily: "Roboto",
-                            fontStyle: FontStyle.normal,
-                            fontWeight: FontWeight.w500
-                        ),
-                      )
+                        label: Text(
+                          "***********@mail.com",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Color.fromARGB(255, 207, 207, 207),
+                              fontSize: 14,
+                              fontFamily: "Roboto",
+                              fontStyle: FontStyle.normal,
+                              fontWeight: FontWeight.w500
+                          ),
+                        )
+                      ),
                     ),
                   ),
                   Row(
@@ -130,7 +130,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           "Password",
                           style: TextStyle(
                               color: Color.fromARGB(255, 167, 167, 167),
-                              height: 0.8,
                               fontSize: 14,
                               fontFamily: "Roboto",
                               fontStyle: FontStyle.normal,
@@ -140,34 +139,36 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(4.0)),
-                          borderSide: BorderSide(
-                              width: 1,
-                              color: Color.fromARGB(255, 167, 167, 167)
+                  SizedBox(
+                    height: 44,
+                    child: TextField(
+                      decoration: InputDecoration(
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                            borderSide: BorderSide(
+                                width: 1,
+                                color: Color.fromARGB(255, 167, 167, 167)
+                            ),
                           ),
-                        ),
-                        label: Text(
-                          "**********",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Color.fromARGB(255, 207, 207, 207),
-                              height: 0.8,
-                              fontSize: 14,
-                              fontFamily: "Roboto",
-                              fontStyle: FontStyle.normal,
-                              fontWeight: FontWeight.w500
-                          ),
-                        )
+                          label: Text(
+                            "**********",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 207, 207, 207),
+                                fontSize: 14,
+                                fontFamily: "Roboto",
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w500
+                            ),
+                          )
+                      ),
                     ),
                   ),
                 ]
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20, left: 5),
+              padding: const EdgeInsets.only(top: 10, left: 6, right: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -175,7 +176,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     children: [
                       Checkbox(
                         side: const BorderSide(
-                            width: 2,
+                            width: 1,
                             color: Color.fromARGB(255, 167, 167, 167)),
                           value: isChecked,
                           onChanged: (value){
@@ -219,25 +220,27 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 343, left: 19, right: 19),
+              padding: const EdgeInsets.only(top: 373, left: 19, right: 19),
               child: Center(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     SizedBox(
                       width: double.infinity,
-                      height: 40,
+                      height: 46,
                       child: Expanded(
                           child: OutlinedButton(
                               style: OutlinedButton.styleFrom(
                                 side: const BorderSide(
                                     color: Color.fromARGB(255, 5, 96, 250)),
-                                backgroundColor: Color.fromARGB(255, 5, 96, 250),
+                                backgroundColor: const Color.fromARGB(255, 5, 96, 250),
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(5)
                                 ),
                               ),
-                            onPressed: () { Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home())); },
+                            onPressed: () {
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const Home()));
+                                },
                             child: const Text(
                               "Login",
                               textAlign: TextAlign.center,
@@ -252,40 +255,37 @@ class _MyHomePageState extends State<MyHomePage> {
                           )
                       ),
                     ),
-                    Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                      child: Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Not have account?",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Color.fromARGB(255, 167, 167, 167),
-                                  fontSize: 14,
-                                  fontFamily: "Roboto",
-                                  fontStyle: FontStyle.normal,
-                                  fontWeight: FontWeight.w400
-                              ),
+                    Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            "Not have account?",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 167, 167, 167),
+                                fontSize: 14,
+                                fontFamily: "Roboto",
+                                fontStyle: FontStyle.normal,
+                                fontWeight: FontWeight.w400
                             ),
-                            TextButton(
-                                onPressed: (){
-                                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUp()));
-                                },
-                                child: const Text(
-                                    "Sign Up",
-                                  style: TextStyle(
-                                      color: Color.fromARGB(255, 5, 96, 250),
-                                      fontSize: 14,
-                                      fontFamily: "Roboto",
-                                      fontStyle: FontStyle.normal,
-                                      fontWeight: FontWeight.w500
-                                  ),
-                                )
-                            )
-                          ],
-                        ),
+                          ),
+                          TextButton(
+                              onPressed: (){
+                                Navigator.of(context).push(MaterialPageRoute(builder: (context) => const SignUp()));
+                              },
+                              child: const Text(
+                                  "Sign Up",
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 5, 96, 250),
+                                    fontSize: 14,
+                                    fontFamily: "Roboto",
+                                    fontStyle: FontStyle.normal,
+                                    fontWeight: FontWeight.w500
+                                ),
+                              )
+                          )
+                        ],
                       ),
                     )
                   ],
